@@ -7,13 +7,15 @@ startBtn.addEventListener('click', onStartBtn);
 stopBtn.addEventListener('click', onStoptBtn);
 
 function onStartBtn() {
-interval = setInterval(()=> {
-         body.style.backgroundColor=getRandomHexColor()
-     }, 1000)
+  interval = setInterval(() => {
+    body.style.backgroundColor = getRandomHexColor()
+  }, 1000);
+    startBtn.toggleAttribute('disabled');
 }
 
 function onStoptBtn() {
-    clearInterval(interval)  
+  clearInterval(interval);
+  stopBtn.removeAttribute('disabled');
 }
 
 function getRandomHexColor() {
