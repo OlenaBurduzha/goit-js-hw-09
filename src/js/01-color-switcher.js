@@ -13,7 +13,7 @@ function onStartBtn() {
 
 function onStoptBtn() {
   clearInterval(interval);
-  stopBtn.removeAttribute('disabled');
+  startBtn.removeAttribute('disabled');
 }
 
 function getBtnColor() {
